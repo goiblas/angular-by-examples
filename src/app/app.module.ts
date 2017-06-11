@@ -5,14 +5,18 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+// importación de un módulo de funcionalidad
+import { BoringformModule } from './boringform/boringform.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BoringformModule // importo el módulo
   ],
   providers: [],
   bootstrap: [AppComponent]

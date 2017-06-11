@@ -1,0 +1,33 @@
+<label for="">Titulo de transferencia</label>
+<input type="text" [(ngModel)]="transferencia.title">
+<label for="">Fecha</label>
+<input type="text" readonly [ngModel]="transferencia.fecha">
+<label for="">Importe</label>
+<input type="number" [(ngModel)]="transferencia.importe">
+
+<div *ngFor=" let tipo of tipos">
+  <!-- for es una atributo no una propiedad -->
+  <label [attr.for]="tipo.id"> 
+
+      <input
+      [id]="tipo.id" 
+      name="tipos" 
+      [(ngModel)]="transferencia.tipo"
+      [value]="tipo.id"
+      (ngModelChange)="cambiarTipo($event)" 
+      type="radio">
+      {{ tipo.title }}
+
+  </label>
+</div>
+<div>
+<label for="categoria">Categoría</label>
+<select id="categoria" name="categoria" [(ngModel)]="transferencia.categoria">
+    <option 
+        *ngFor="let categoria of categorias"
+        [value]="categoria.id"> 
+        {{categoria.title}} 
+    </option>
+</select>
+</div>
+<button (click)="guardarTransferencia()">Guardar</button>

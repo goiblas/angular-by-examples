@@ -1,0 +1,11 @@
+%caja {
+    padding: 10px;
+}
+.tipoIngreso {
+    @extend %caja;
+    background-color: greenyellow;
+}
+.tipoGasto {
+    @extend %caja;
+    background-color: brown;
+}

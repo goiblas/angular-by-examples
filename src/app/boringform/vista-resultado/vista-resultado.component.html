@@ -1,0 +1,6 @@
+<div *ngFor="let transferencia of transferencias">
+  <div [ngClass]="(transferencia.tipo === 1) ? 'tipoIngreso': 'tipoGasto'">
+    <div>{{transferencia.fecha}}</div>
+    <div>{{transferencia.importe}}</div>
+  </div>
+</div>

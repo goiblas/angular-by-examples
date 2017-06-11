@@ -1,0 +1,17 @@
+<div class="wrap">
+<generate-boringform 
+  [tipos]="tipos" 
+  [categorias]="categorias" 
+  [transferencia]="transferencia" 
+  (guardar)="guardarTransferencia($event)"
+  (actualizarTipo)="cambiarTipoDeTransferencia($event)">
+</generate-boringform>
+
+<vista-resultado
+  [transferencias]= "misTransferencias"
+></vista-resultado>
+
+</div>
+<div>
+  {{ misTransferencias | json}}
+</div>
