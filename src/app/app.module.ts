@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 // rutas
-import { ModulesInMyApp } from './app.routes';
+import { RoutesApp } from './routes/app.routes';
 
 // importación de un módulo de funcionalidad
 import { BoringformModule } from './boringform/boringform.module';
@@ -31,7 +31,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BoringformModule, // importo el módulo
     BibliotecaModule,
     HeroModule,
-    ModulesInMyApp // Routes
+    RoutesApp // Routes
   ],
   providers: [],
   bootstrap: [AppComponent]
