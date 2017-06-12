@@ -9,6 +9,7 @@ export class VistaResultadoComponent implements OnInit {
 
 @Input()
 transferencias: TransferenciaModel[];
+
   constructor() { }
 
   ngOnInit() {
