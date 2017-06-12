@@ -1,4 +1,24 @@
 <p>
-  biblioteca works!
+  biblioteca works! {{libro}}
 </p>
-{{libro}}
+
+<form>
+			<input type="text" class="form-control" id="searchQuery"
+               required
+                name="searchQuery"
+                placeholder="Book or book type you would like to search..."
+							 (keyup)="searchBooks($event)" />
+			
+			<div *ngIf="inputError" class="alert alert-danger">
+				Please type 3 or more characters
+			</div>
+		</form>
+
+
+
+	<ul class="books-listing">
+		<li *ngFor="let bookData of storage" class="well col-xs-11">
+      <div>{{bookData.volumeInfo.description}}</div>
+      <img *ngIf="bookData.imageLinks" class="pull-left img-size" src="{{bookData.imageLinks.smallThumbnail}}" />
+		</li>
+	</ul>
